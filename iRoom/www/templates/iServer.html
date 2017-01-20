@@ -1,0 +1,31 @@
+<ion-view title="iServer" id="page1" style="background-color:#F1F1F1;">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-icon icon No Icon"></button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="iServer-form1" class="list">
+      <div id="iServer-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
+        <p style="color:#000000;">État actuel du système :</p>
+
+        <p style="color:#000000;">Température : {{ data.degrees }}°C</p>
+
+        <p style="color:#000000;">Température (Server) : {{ data.intdegrees }}°C</p>
+
+        <p style="color:#000000;">Taux de luminosité : {{ data.light }}%</p>
+
+        <p style="color:#000000;">Tension : {{ data.tension }} V</p>
+
+        <p style="color:#000000;">Statut de la porte : Ouvert à {{ data.door }}%</p>
+
+        <p style="color:#000000;">Statut de l'alarme : {{ data.alarm }}</p>
+      </div>
+      <div class="spacer" style="width: 300px; height: 7px;"></div>
+      <button id="iServer-button1" on-tap="switchOff()" class="button button-assertive  button-block">Éteindre la sirène !</button>
+      <ion-toggle ng-model="blue.blue" ng-true-value="true" ng-false-value="false" ng-change="switchBlue()" toggle-class="toggle-positive" id="iServer-toggle1" name="led_blue">LED Bleu</ion-toggle>
+      <ion-toggle ng-model="white.white" ng-true-value="true" ng-false-value="false" ng-change="switchWhite()" toggle-class="toggle-light" id="iServer-toggle2" name="led_white">LED Blanche</ion-toggle>
+      <ion-toggle ng-model="green.green" ng-true-value="true" ng-false-value="false" ng-change="switchGreen()" toggle-class="toggle-balanced" id="iServer-toggle3" name="led_green">LED Verte</ion-toggle>
+      <ion-toggle ng-model="red.red" ng-true-value="true" ng-false-value="false" ng-change="switchRed()" toggle-class="toggle-assertive" id="iServer-toggle4" name="led_red">LED Rouge</ion-toggle>
+      <ion-toggle ng-model="alarm.alarm" ng-true-value="true" ng-false-value="false" ng-change="switchAlarm()" toggle-class="toggle-royal" id="iServer-toggle5" name="Alarme">Alarme</ion-toggle>
+    </form>
+  </ion-content>
+</ion-view>

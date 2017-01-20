@@ -1,3 +1,6 @@
+Arduino/Builds/*
+Arduino/center/Builds/*
+.idea/*
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
